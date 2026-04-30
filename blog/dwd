@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koda Property Group | We Buy Florida Properties</title>
+<meta name="description" content="Koda Property Group buys Florida properties directly from homeowners. Fast, fair, cash offers. No repairs, no commissions, no hassle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f2ec;
+    --red: #c8392b;
+    --red-dark: #a02e23;
+    --grey: #888;
+    --grey-light: #e8e4dc;
+    --text: #1a1a1a;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 48px;
+    background: rgba(245,242,236,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.12em;
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  .logo span { color: var(--red); }
+
+  nav a {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 36px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  nav a:hover { opacity: 1; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+  }
+
+  .hero-left {
+    background: var(--black);
+    padding: 80px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left::before {
+    content: 'KODA';
+    position: absolute;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 280px;
+    color: rgba(255,255,255,0.03);
+    bottom: -40px;
+    left: -20px;
+    pointer-events: none;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 24px;
+  }
+
+  .hero-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 6vw, 84px);
+    line-height: 0.95;
+    color: var(--white);
+    letter-spacing: 0.02em;
+    margin-bottom: 32px;
+  }
+
+  .hero-headline em {
+    color: var(--red);
+    font-style: normal;
+  }
+
+  .hero-body {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(245,242,236,0.6);
+    max-width: 420px;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 18px 40px;
+    transition: background 0.2s, transform 0.2s;
+    width: fit-content;
+  }
+  .btn-primary:hover {
+    background: var(--red-dark);
+    transform: translateY(-1px);
+  }
+
+  .hero-right {
+    background: var(--grey-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 64px;
+    position: relative;
+  }
+
+  .hero-stats {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .stat-item {
+    padding: 32px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+  }
+  .stat-item:first-child { border-top: 1px solid rgba(0,0,0,0.12); }
+
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    line-height: 1;
+    color: var(--black);
+    letter-spacing: 0.02em;
+  }
+
+  .stat-num span { color: var(--red); }
+
+  .stat-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-top: 4px;
+  }
+
+  /* ── HOW IT WORKS ── */
+  .section {
+    padding: 120px 48px;
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 4vw, 60px);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: var(--black);
+    margin-bottom: 64px;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .step {
+    padding: 48px 40px;
+    border-left: 1px solid rgba(0,0,0,0.1);
+    position: relative;
+  }
+  .step:first-child { border-left: none; }
+
+  .step-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
+    color: var(--grey-light);
+    line-height: 1;
+    margin-bottom: 24px;
+  }
+
+  .step-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+
+  .step-body {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--grey);
+    font-weight: 300;
+  }
+
+  /* ── WHY KODA ── */
+  .why {
+    background: var(--black);
+    padding: 120px 48px;
+  }
+
+  .why .section-title { color: var(--white); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+  }
+
+  .why-item {
+    background: var(--black);
+    padding: 48px;
+  }
+
+  .why-icon {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .why-title {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+
+  .why-body {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(245,242,236,0.45);
+    font-weight: 300;
+  }
+
+  /* ── CONTACT ── */
+  .contact {
+    padding: 120px 48px;
+    background: var(--white);
+  }
+
+  .contact-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 5vw, 72px);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: var(--black);
+    margin-bottom: 24px;
+  }
+
+  .contact-title em { color: var(--red); font-style: normal; }
+
+  .contact-sub {
+    font-size: 16px;
+    color: var(--grey);
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 48px;
+  }
+
+  .contact-links {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 32px;
+    border: 1px solid rgba(0,0,0,0.15);
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: all 0.2s;
+  }
+  .contact-link:hover {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+  }
+
+  .contact-link.primary {
+    background: var(--red);
+    border-color: var(--red);
+    color: var(--white);
+  }
+  .contact-link.primary:hover {
+    background: var(--red-dark);
+    border-color: var(--red-dark);
+  }
+
+  /* ── LEGAL ── */
+  .legal {
+    background: #0f0f0f;
+    padding: 80px 48px;
+  }
+
+  .legal-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .legal h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--white);
+    letter-spacing: 0.08em;
+    margin-bottom: 24px;
+    margin-top: 48px;
+  }
+  .legal h2:first-child { margin-top: 0; }
+
+  .legal p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.4);
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+
+  .legal a { color: rgba(255,255,255,0.6); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--black);
+    padding: 32px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  footer .logo { font-size: 18px; }
+
+  .footer-legal {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.04em;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+  /* ── SMS DISCLOSURE ── */
+  .sms-bar {
+    background: var(--red);
+    padding: 14px 48px;
+    text-align: center;
+  }
+  .sms-bar p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.04em;
+    font-weight: 300;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    header { padding: 16px 24px; }
+    nav { display: none; }
+
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+    .hero-left { padding: 80px 32px 60px; }
+    .hero-right { padding: 60px 32px; }
+
+    .section { padding: 80px 24px; }
+    .steps { grid-template-columns: 1fr; }
+    .step { border-left: none; border-top: 1px solid rgba(0,0,0,0.1); padding: 40px 24px; }
+    .step:first-child { border-top: none; }
+
+    .why { padding: 80px 24px; }
+    .why-grid { grid-template-columns: 1fr; }
+
+    .contact { padding: 80px 24px; }
+    .legal { padding: 60px 24px; }
+    footer { flex-direction: column; gap: 16px; padding: 24px; text-align: center; }
+    .sms-bar { padding: 14px 24px; }
+  }
+
+  /* ── FADE IN ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- SMS Disclosure Bar -->
+<div class="sms-bar">
+  <p>By providing your phone number, you consent to receive SMS messages from Koda Property Group. Message &amp; data rates may apply. Message frequency varies. Reply STOP to opt out. Reply HELP for help.</p>
+</div>
+
+<!-- Header -->
+<header>
+  <a href="#" class="logo">KODA <span>PROPERTY GROUP</span></a>
+  <nav>
+    <a href="#how">How It Works</a>
+    <a href="#why">Why Koda</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Florida Property Buyers</p>
+    <h1 class="hero-headline">We Buy<br>Florida<br><em>Properties</em><br>Direct.</h1>
+    <p class="hero-body">No repairs. No commissions. No open houses. We make fair cash offers and close on your timeline — as fast as 7 days.</p>
+    <a href="#contact" class="btn-primary">Get a Cash Offer</a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats">
+      <div class="stat-item fade-in">
+        <div class="stat-num">7<span>+</span></div>
+        <div class="stat-label">Day Close Available</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-num">$0</div>
+        <div class="stat-label">Commissions or Fees</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-num">FL</div>
+        <div class="stat-label">Statewide Coverage</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="section" id="how">
+  <div class="section-inner">
+    <p class="section-label">The Process</p>
+    <h2 class="section-title">Three Steps<br>to Sold</h2>
+    <div class="steps">
+      <div class="step fade-in">
+        <div class="step-num">01</div>
+        <h3 class="step-title">Tell Us About Your Property</h3>
+        <p class="step-body">Call or text us with your property address and a few details. Takes less than five minutes and there's no obligation.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">02</div>
+        <h3 class="step-title">Receive a Fair Cash Offer</h3>
+        <p class="step-body">We'll research your property and present a straightforward cash offer — no lowball tactics, no hidden fees, no pressure.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">03</div>
+        <h3 class="step-title">Close on Your Timeline</h3>
+        <p class="step-body">Choose your closing date. We work around your schedule. Most closings complete in 7–21 days. No repairs required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Koda -->
+<section class="why" id="why">
+  <div class="section-inner">
+    <p class="section-label" style="color:rgba(200,57,43,0.9)">Why Work With Us</p>
+    <h2 class="section-title">No Agents.<br>No Hassle.</h2>
+    <div class="why-grid">
+      <div class="why-item fade-in">
+        <div class="why-icon">⚡</div>
+        <h3 class="why-title">Fast Closings</h3>
+        <p class="why-body">We close in as little as 7 days. No waiting on bank approvals, no financing contingencies — just a clean, fast transaction.</p>
+      </div>
+      <div class="why-item fade-in">
+        <div class="why-icon">🔒</div>
+        <h3 class="why-title">Sell As-Is</h3>
+        <p class="why-body">Don't spend a dollar on repairs or staging. We buy properties in any condition — distressed, outdated, vacant, or occupied.</p>
+      </div>
+      <div class="why-item fade-in">
+        <div class="why-icon">💰</div>
+        <h3 class="why-title">Zero Commissions</h3>
+        <p class="why-body">No real estate agents involved means no 5-6% commission coming out of your proceeds. What we offer is what you walk away with.</p>
+      </div>
+      <div class="why-item fade-in">
+        <div class="why-icon">📋</div>
+        <h3 class="why-title">Simple Process</h3>
+        <p class="why-body">We handle all the paperwork. One conversation, one contract, one closing. No surprises, no runaround.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <p class="section-label" style="text-align:center">Get In Touch</p>
+    <h2 class="contact-title">Ready to <em>Sell</em><br>Your Property?</h2>
+    <p class="contact-sub">We buy properties across Florida — Charlotte County, Sarasota, Lee County, Polk, Pasco, Seminole, and more. Reach out today for a no-obligation cash offer.</p>
+    <div class="contact-links">
+      <a href="tel:7206608724" class="contact-link primary">📞 Call or Text Us</a>
+      <a href="mailto:julianpeczkowski@outlook.com" class="contact-link">✉ Email Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- Legal / Privacy / ToS -->
+<section class="legal" id="legal">
+  <div class="legal-inner">
+
+    <h2>Privacy Policy</h2>
+    <p>Koda Property Group ("Company," "we," "us," or "our") is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard information when you visit our website or contact us.</p>
+    <p><strong style="color:rgba(255,255,255,0.6)">Information We Collect:</strong> We collect information you voluntarily provide, including your name, phone number, email address, and property address when you contact us about a potential sale. We may also collect technical data such as browser type and IP address through standard server logs.</p>
+    <p><strong style="color:rgba(255,255,255,0.6)">How We Use Your Information:</strong> We use your information solely to evaluate and respond to your property inquiry, communicate with you about potential transactions, and send you SMS messages if you have provided consent. We do not sell, trade, or rent your personal information to third parties.</p>
+    <p><strong style="color:rgba(255,255,255,0.6)">SMS Communications:</strong> By providing your phone number, you consent to receive SMS messages from Koda Property Group regarding your property inquiry. Message and data rates may apply. Message frequency varies. You may opt out at any time by replying STOP. For help, reply HELP or contact us at <a href="mailto:julianpeczkowski@outlook.com">julianpeczkowski@outlook.com</a>.</p>
+    <p><strong style="color:rgba(255,255,255,0.6)">Data Retention:</strong> We retain your information only as long as necessary to complete the transaction or as required by law.</p>
+    <p><strong style="color:rgba(255,255,255,0.6)">Your Rights:</strong> You may request access to, correction of, or deletion of your personal information by contacting us at <a href="mailto:julianpeczkowski@outlook.com">julianpeczkowski@outlook.com</a>.</p>
+    <p><strong style="color:rgba(255,255,255,0.6)">Contact:</strong> Koda Property Group · <a href="mailto:julianpeczkowski@outlook.com">julianpeczkowski@outlook.com</a> · <a href="tel:7206608724">720-660-8724</a></p>
+
+    <h2>Terms of Service</h2>
+    <p>By accessing this website and contacting Koda Property Group, you agree to the following terms. This website is provided for informational purposes only. Nothing on this site constitutes a binding offer or guarantee of purchase.</p>
+    <p><strong style="color:rgba(255,255,255,0.6)">No Obligation:</strong> Contacting us does not obligate you to sell your property, nor does it obligate us to purchase it. All transactions are subject to a signed purchase agreement.</p>
+    <p><strong style="color:rgba(255,255,255,0.6)">Accuracy of Information:</strong> You agree to provide accurate information about your property. Misrepresentation of material facts may void any agreement between us.</p>
+    <p><strong style="color:rgba(255,255,255,0.6)">SMS Consent:</strong> By submitting your phone number, you expressly consent to receive automated and manual SMS messages from Koda Property Group. This consent is not a condition of any purchase or sale. Standard message and data rates apply. Reply STOP to unsubscribe at any time.</p>
+    <p><strong style="color:rgba(255,255,255,0.6)">Limitation of Liability:</strong> Koda Property Group shall not be liable for any indirect, incidental, or consequential damages arising from use of this website or reliance on information provided herein.</p>
+    <p><strong style="color:rgba(255,255,255,0.6)">Governing Law:</strong> These terms are governed by the laws of the State of Colorado, without regard to conflict of law principles.</p>
+    <p><strong style="color:rgba(255,255,255,0.6)">Changes:</strong> We reserve the right to update these terms at any time. Continued use of this website constitutes acceptance of any changes.</p>
+    <p>Last updated: April 2026</p>
+
+    <h2>SMS Terms &amp; Opt-Out</h2>
+    <p>Koda Property Group may send SMS messages to phone numbers you provide. These messages relate to your property inquiry only. Message frequency varies based on your inquiry status.</p>
+    <p><strong style="color:rgba(255,255,255,0.6)">To opt out:</strong> Reply STOP to any message. You will receive one confirmation message and no further messages will be sent.</p>
+    <p><strong style="color:rgba(255,255,255,0.6)">For help:</strong> Reply HELP or email <a href="mailto:julianpeczkowski@outlook.com">julianpeczkowski@outlook.com</a>.</p>
+    <p>Message and data rates may apply. Carriers are not liable for delayed or undelivered messages.</p>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <a href="#" class="logo">KODA <span>PROPERTY GROUP</span></a>
+  <div class="footer-links">
+    <a href="#legal">Privacy Policy</a>
+    <a href="#legal">Terms of Service</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <p class="footer-legal">© 2026 Koda Property Group LLC. All rights reserved.</p>
+</footer>
+
+<script>
+  // Fade in on scroll
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  fadeEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
