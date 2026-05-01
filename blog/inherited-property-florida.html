@@ -117,7 +117,17 @@
         <div class="article-cta-box">
           <h4>Inherited a Florida property and not sure what to do?</h4>
           <p>We're active buyers throughout Charlotte, Seminole, and surrounding counties. We can close quickly and handle properties in any condition — no repairs needed.</p>
-          <a href="../contact.html" class="btn btn-white">Talk to Us — No Obligation</a>
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="../thank-you.html">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="hidden" name="source" value="blog/inherited-property">
+            <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+            <div class="article-cta-form">
+              <input type="text" name="name" placeholder="Your name" required>
+              <input type="tel" name="phone" placeholder="Phone number" required>
+              <button type="submit">Get Help &rarr;</button>
+            </div>
+            <p style="font-size:0.72rem; color:rgba(255,255,255,0.4); margin-top:0.5rem; line-height:1.5;">By submitting, you consent to receive SMS messages. Reply STOP to opt out.</p>
+          </form>
         </div>
 
         <h2 id="mortgage">What If There's Still a Mortgage?</h2>

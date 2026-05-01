@@ -121,7 +121,17 @@
         <div class="article-cta-box">
           <h4>Behind on your mortgage and have equity in the property?</h4>
           <p>We can often close in 2–3 weeks — fast enough to resolve the situation before it escalates. No repairs, no showings, no commissions.</p>
-          <a href="../contact.html" class="btn btn-white">Talk to Us — No Obligation</a>
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="../thank-you.html">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="hidden" name="source" value="blog/behind-on-mortgage">
+            <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+            <div class="article-cta-form">
+              <input type="text" name="name" placeholder="Your name" required>
+              <input type="tel" name="phone" placeholder="Phone number" required>
+              <button type="submit">Get Help &rarr;</button>
+            </div>
+            <p style="font-size:0.72rem; color:rgba(255,255,255,0.4); margin-top:0.5rem; line-height:1.5;">By submitting, you consent to receive SMS messages. Reply STOP to opt out.</p>
+          </form>
         </div>
 
         <h2 id="timeline">How Your Timeline Affects Your Options</h2>

@@ -111,7 +111,17 @@
         <div class="article-cta-box">
           <h4>If you've received a lis pendens or demand letter, you still have time.</h4>
           <p>Most Florida homeowners in early stages have 12+ months before a foreclosure sale. We can often help you close before it gets that far.</p>
-          <a href="../contact.html" class="btn btn-white">Talk to Us — No Obligation</a>
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="../thank-you.html">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="hidden" name="source" value="blog/foreclosure-timeline">
+            <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+            <div class="article-cta-form">
+              <input type="text" name="name" placeholder="Your name" required>
+              <input type="tel" name="phone" placeholder="Phone number" required>
+              <button type="submit">Get Help &rarr;</button>
+            </div>
+            <p style="font-size:0.72rem; color:rgba(255,255,255,0.4); margin-top:0.5rem; line-height:1.5;">By submitting, you consent to receive SMS messages. Reply STOP to opt out.</p>
+          </form>
         </div>
 
         <h2 id="timeline">How Long It Actually Takes</h2>

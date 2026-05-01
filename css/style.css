@@ -605,6 +605,38 @@ textarea.form-control { resize: vertical; min-height: 110px; }
   font-weight: 600;
 }
 
+/* Thank-you reading links */
+.thankyou-reading {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--grey-light);
+  text-align: left;
+}
+.thankyou-reading-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 1rem;
+}
+.thankyou-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ty-link {
+  color: var(--red);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: none;
+  padding: 0.625rem 0;
+  border-bottom: 1px solid var(--grey-light);
+  display: block;
+}
+.ty-link:hover { color: #a82d22; }
+
 /* ── Footer ── */
 .footer {
   background: var(--black);
@@ -1095,4 +1127,133 @@ textarea.form-control { resize: vertical; min-height: 110px; }
   .deal-numbers-box { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .deal-numbers-box h4 { grid-column: 1 / -1; margin-bottom: 0; }
   .deal-number-row { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+}
+
+/* ============================================================
+   Inline Lead Capture Forms (Session 9)
+   ============================================================ */
+
+.inline-form-section {
+  background: var(--black);
+  padding: 3rem var(--section-h);
+}
+.inline-form-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.inline-form-copy h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: white;
+  margin-bottom: 0.75rem;
+}
+.inline-form-copy p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.65;
+}
+.inline-form-copy .cta-sub {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+}
+.inline-form-copy .cta-sub a {
+  color: white;
+  font-weight: 600;
+}
+.inline-form-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.inline-form-form .form-group {
+  margin-bottom: 0.75rem;
+}
+.inline-form-form label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 0.35rem;
+}
+.inline-form-form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: white;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+.inline-form-form input::placeholder { color: rgba(255,255,255,0.3); }
+.inline-form-form input:focus { border-color: rgba(255,255,255,0.5); }
+.inline-form-form .btn-inline-submit {
+  width: 100%;
+  background: var(--red);
+  color: white;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  margin-top: 0.25rem;
+  transition: background 0.2s;
+}
+.inline-form-form .btn-inline-submit:hover { background: #a82d22; }
+.inline-form-consent {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.35);
+  margin-top: 0.75rem;
+  line-height: 1.5;
+}
+
+/* Article mini form inside CTA box */
+.article-cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.article-cta-form input {
+  padding: 0.7rem 0.875rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.article-cta-form input::placeholder { color: rgba(255,255,255,0.4); }
+.article-cta-form input:focus { border-color: rgba(255,255,255,0.5); }
+.article-cta-form button {
+  background: var(--red);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.article-cta-form button:hover { background: #a82d22; }
+
+@media (max-width: 768px) {
+  .inline-form-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .inline-form-form .form-row { grid-template-columns: 1fr; }
+  .article-cta-form { grid-template-columns: 1fr; }
+  .article-cta-form button { width: 100%; }
 }

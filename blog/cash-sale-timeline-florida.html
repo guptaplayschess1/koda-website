@@ -137,8 +137,18 @@
         <div class="article-end-cta">
           <h3>Need to Close Fast?</h3>
           <p>We work with title companies we trust to move quickly. If you're in a time-sensitive situation, tell us and we'll do what we can to prioritize the process. No obligation to reach out.</p>
-          <a href="../contact.html" class="btn btn-primary">Get a Cash Offer — No Obligation</a><br>
-          <span class="cta-phone">Or call or text: <a href="tel:+17206608724">(720) 660-8724</a></span>
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="../thank-you.html">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="hidden" name="source" value="blog/cash-sale-timeline">
+            <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+            <div class="article-end-cta-form">
+              <input type="text" name="name" placeholder="Your name" required>
+              <input type="tel" name="phone" placeholder="Phone number" required>
+              <button type="submit">Get Help &rarr;</button>
+            </div>
+            <p class="form-consent">By submitting, you consent to receive SMS messages from Koda Property Group. Reply STOP to opt out. Msg &amp; data rates may apply.</p>
+          </form>
+          <p class="cta-phone" style="margin-top:1rem;">Or call or text: <a href="tel:+17206608724">(720) 660-8724</a></p>
         </div>
 
         <div class="related-posts">

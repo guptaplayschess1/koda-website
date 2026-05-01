@@ -172,6 +172,40 @@
     </div>
   </section>
 
+
+  <!-- Inline Lead Capture Form -->
+  <section class="inline-form-section">
+    <div class="inline-form-inner">
+      <div class="inline-form-copy">
+        <h2>Have a Property in Sarasota County?</h2>
+        <p>Tell us what you have and we'll respond within 24 hours with a straightforward cash offer. No pressure, no obligation.</p>
+        <p class="cta-sub">Prefer to call? <a href="tel:+17206608724">(720) 660-8724</a></p>
+      </div>
+      <div class="inline-form-form">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="../thank-you.html">
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="source" value="sarasota-county">
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="if-name-sarasota-county">Your Name *</label>
+              <input type="text" id="if-name-sarasota-county" name="name" placeholder="Jane Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="if-phone-sarasota-county">Phone *</label>
+              <input type="tel" id="if-phone-sarasota-county" name="phone" placeholder="(555) 000-0000" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="if-address-sarasota-county">Property Address</label>
+            <input type="text" id="if-address-sarasota-county" name="address" placeholder="123 Main St, Sarasota County">
+          </div>
+          <button type="submit" class="btn-inline-submit">Get a Cash Offer &rarr;</button>
+          <p class="inline-form-consent">By submitting, you consent to receive SMS messages. Reply STOP to opt out. Msg &amp; data rates may apply.</p>
+        </form>
+      </div>
+    </div>
+  </section>
   <!-- CTA -->
   <section class="cta-band">
     <h2>Have a Property in Sarasota County?</h2>
